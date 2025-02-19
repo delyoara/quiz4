@@ -1,0 +1,137 @@
+body{
+    background: #70e1f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* background-image: url("vagues.jpeg"); */
+}
+
+#quiz-container{
+
+    margin: 10%;
+    /* background-color: #004c58; */
+    width: 80%;
+    /* border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     /* border-bottom-left-radius: 15px;
+     border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     /* border-bottom-right-radius: 15px; */ */
+    /* background-image: url("vagues.jpeg");  */
+
+}
+
+
+
+
+.question{
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    border-left: #076585; ;
+    border: 3px solid;
+    padding: 2%;
+    font-size: 120%;
+    border-radius: 2%;
+    border: inset;
+    font-family: rockwell;
+    /* align-content: center;
+    text-decoration: center;
+    text-align: center; */
+    position: relative;
+    /* display :flex; */
+    border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 15px;
+     border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-right-radius: 15px;
+    padding-left: 4%;
+    width: 100%;
+    
+    /* align-self: center; */
+
+    /* rockwell; */
+
+}
+.question::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3%; /* La largeur de la bordure à gauche */
+    height: 100%;
+    background-color: #076685f5;
+     /* La couleur que tu souhaites pour la bordure */
+     border-top-left-radius: 14px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 14px;
+     /* clip-path: ellipse(80% 30% at 60% 80%); */
+    
+}
+/* clip-path: ellipse*/
+.options{
+    text-align: center;
+   
+ 
+}
+
+.options button{
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: rockwell;
+    font-size: 100%;
+    margin-top: 1%;
+    width: 50%;
+    border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 15px;
+     border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-right-radius: 15px;
+     cursor: pointer;
+     /* align-items: center; */
+     /* align-content: center; */
+     
+ 
+     transition: background-color 0.3s ease;
+}
+/* .antoher-class{
+display: block;
+margin-bottom: 10px;
+} */
+button:hover {
+    background: #2e95aa;
+}
+/* button:active {
+    background: #2399ac; 
+} */
+
+.button-container{
+
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
+
+}
+#next-button {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    /* width: 63%; */
+    cursor: pointer;
+    background: #076585;
+    color: white;
+    display: inline-block;
+    width: 15%;
+    border-top-left-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 5px;
+     border-top-right-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-right-radius: 5px;
+   
+}
+#next-button:hover {
+    background-color: #005f73;
+}
+
+#next-button:active {
+    background-color: #004c58; 
+    
+}
