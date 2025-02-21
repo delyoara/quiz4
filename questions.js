@@ -33,12 +33,12 @@ export const culture = {
       {
         text: "Quelle région ne fait pas partie de l’Espagne ? ",
         options: [
-          "Andalousie",
-          "Asturies",
-          "Castille-La Manche",
-          "Ombrie"
+          "L'Andalousie",
+          "Les Asturies",
+          "La Castille-La Manche",
+          "L'Ombrie"
         ],
-        correct_answer: "Ombrie"
+        correct_answer: "L'Ombrie"
       },
       
       // Autres questions...

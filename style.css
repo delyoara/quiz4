@@ -1,26 +1,22 @@
 body{
-    background: #70e1f5;  /* fallback for old browsers */
+  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/* background-image: url("vagues.jpeg"); */
-    display: flex;  /* Utiliser Flexbox */
-    justify-content: center;  /* Centrer horizontalement */
+     
+    display: flex; 
+    justify-content: center; 
     align-items: center;
 }
 
 #quiz-container{
+    /* width: 70%;  */
+
+    /* max-width: 70%; */
+    min-width: 50%;
     margin-top: 10%;
-  
-    /* background-color: #004c58; */
-    width: 60%; 
-    /* border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
-     /* border-bottom-left-radius: 15px;
-     border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
-     /* border-bottom-right-radius: 15px; */ 
-    /* background-image: url("vagues.jpeg");  */
-  border-width: 80%;
-  border-style: outset;
+    border-width: 80%;
+    border-style: outset;
+    
   border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
@@ -34,32 +30,31 @@ body{
 .question{
     
     flex-grow: 1;
-    background: #076585;  /* fallback for old browsers */
+  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    border-left: #076585; ;
-    border: 3px solid;
+ 
+    border-left: 3px solid #076585;
+   
     padding: 2%;
     font-size: 120%;
     border-radius: 2%;
     border: inset;
     font-family: rockwell;
-    /* align-content: center;
-    text-decoration: center;
-    text-align: center; */
+   
     position: relative;
-    /* display :flex; */
     border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-left-radius: 15px;
      border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-right-radius: 15px;
     padding-left: 4%;
-    /* width: 96%; */
-    
-    /* align-self: center; */
 
-    /* rockwell; */
+    transform: perspective(75em) rotateX(3deg);
+    /* scaleX(0,5); cu asta bordura de la intrebare se duce la stanga */
+     box-shadow:
+         rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+         rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+  
 
 }
 .question::before{
@@ -67,13 +62,13 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 3%; /* La largeur de la bordure à gauche */
+    width: 2%; 
     height: 100%;
     background-color: #076685f5;
-     /* La couleur que tu souhaites pour la bordure */
-     border-top-left-radius: 14px;  /* Arrondir le coin supérieur gauche */
-     border-bottom-left-radius: 14px;
-     /* clip-path: ellipse(80% 30% at 60% 80%); */
+    
+     border-top-left-radius: 13px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 13px;
+     
     
 }
 /* clip-path: ellipse*/
@@ -91,18 +86,28 @@ body{
     font-family: rockwell;
     font-size: 100%;
     margin-top: 1%;
-    /* width: 50%; */
+
     border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-left-radius: 15px;
      border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-right-radius: 15px;
      cursor: pointer;
      width: 80%;//pour définir la taille
-     /* align-items: center; */
-     /* align-content: center; */
      
- 
-     transition: background-color 0.3s ease;
+     transform:
+     perspective(75em)
+   box-shadow:
+     rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+     rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+
+   border: 2px solid;
+   border-color:
+     rgb(213, 220, 226)
+     rgb(213, 220, 226)
+     rgb(184, 194, 204);
+
+
+
 }
 
 .question, .options {
@@ -133,56 +138,37 @@ button:hover {
     
 
 }
-#next-button {
+#next-button, #replay-button {
     align-items: center;
     align-content: center;
     text-align: center;
-
-    /* width: 63%; */
     cursor: pointer;
     background: #076585;
     color: white;
     display: inline-block;
     width: 15%;
-    border-top-left-radius: 5px;  /* Arrondir le coin supérieur gauche */
+    border-top-left-radius: 5px; 
      border-bottom-left-radius: 5px;
-     border-top-right-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-top-right-radius: 5px;  
      border-bottom-right-radius: 5px;
      margin-bottom: 2%;
 }
-#next-button:hover {
+#next-button:hover, #replay-button:hover  {
     background-color: #005f73;
 }
 
-#next-button:active {
+#next-button:active, #replay-button:active  {
     background-color: #004c58; 
     
 }
 
 
-#replay-button {
-
-    align-items: center;
-    align-content: center;
-    text-align: center;
-
-    /* width: 63%; */
-    cursor: pointer;
-    background: #076585;
-    color: white;
-    display: inline-block;
-    width: 15%;
-    border-top-left-radius: 5px;  /* Arrondir le coin supérieur gauche */
+#countButton{
+    background: #577dde;
+    border-top-left-radius: 5px;  
      border-bottom-left-radius: 5px;
-     border-top-right-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-top-right-radius: 5px; 
      border-bottom-right-radius: 5px;
-     margin-bottom: 2%;
-}
+     color: white;
 
-#replay-button:hover {
-    background-color: #005f73;
-}
-
-#replay-button:active {
-    background-color: #004c58; 
 }
