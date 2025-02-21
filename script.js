@@ -1,45 +1,55 @@
-import { culture } from './questions.js';
+import { culture } from "./questions.js";
 
-let questionText = 0;
-let optionsText = 0;
-const nextButton = document.querySelector('#next-button');
-let optionsBox = document.querySelector('.options');
+let index = 0;
+const nextButton = document.querySelector("#next-button");
+let optionsBox = document.querySelector(".options");
+const replayButton = document.querySelector("#replay-button");
+// let correctAnswer = culture.correct_answer.trim();
 
-function update () {
-    
-    
-    const question = document.querySelector('.question');
-    question.innerText = culture.questions[questionText].text;
+const question = document.querySelector(".question");
+
+function loadQuestion() {
+  question.innerText = culture.questions[index].text;
 
 
-    
-    optionsBox.innerHTML = '';
-    
-    
-    
-    culture.questions[optionsText].options.forEach((option) => {
-        
-    let bouton = document.createElement('button');
-  
 
- bouton.classList.add('another-class');
-    bouton.textContent = option;
+  optionsBox.innerHTML = "";
+
+  culture.questions[index].options.forEach((options) => {
+    let bouton = document.createElement("button");
+    //insère l'option du boutton
+    bouton.classList.add("another-class");
+    bouton.textContent = options;
     optionsBox.appendChild(bouton);
 
-    let br = document.createElement('br');
+    let br = document.createElement("br");
     optionsBox.appendChild(br);
-    })
+  });
 }
-    nextButton.addEventListener('click',() => {
-        questionText++;
-        optionsText++;
-        
-     update();
+nextButton.addEventListener("click", () => {
+  index++;
 
+ 
+  if (index < culture.questions.length) {
+    //Mettre à jour la question et les options
+    index;
+    loadQuestion();
+  } else {
+    question.innerText =
+      "Felicitations, vous avez terminé notre quiz de culture générale !";
+    optionsBox.innerHTML = "";
+    nextButton.style.display = "none";
+    replayButton.style.display = "inline-block";
 
-    })
+    replayButton.addEventListener("click", () => {
+      //document.createElement
+      index = 0;
+      nextButton.style.display = "inline-block";
+      replayButton.style.display = "none";
+      loadQuestion();
+    });
+  }
+});
 
-update();
+loadQuestion();
 
-
-    

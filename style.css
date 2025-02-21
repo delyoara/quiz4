@@ -4,18 +4,27 @@ body{
     background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* background-image: url("vagues.jpeg"); */
+    display: flex;  /* Utiliser Flexbox */
+    justify-content: center;  /* Centrer horizontalement */
+    align-items: center;
 }
 
 #quiz-container{
-
-    margin: 10%;
+    margin-top: 10%;
+  
     /* background-color: #004c58; */
-    width: 80%;
+    width: 60%; 
     /* border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
      /* border-bottom-left-radius: 15px;
      border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
-     /* border-bottom-right-radius: 15px; */ */
+     /* border-bottom-right-radius: 15px; */ 
     /* background-image: url("vagues.jpeg");  */
+  border-width: 80%;
+  border-style: outset;
+  border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
+  border-bottom-right-radius: 15px;
 
 }
 
@@ -23,6 +32,8 @@ body{
 
 
 .question{
+    
+    flex-grow: 1;
     background: #076585;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -44,7 +55,7 @@ body{
      border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-right-radius: 15px;
     padding-left: 4%;
-    width: 100%;
+    /* width: 96%; */
     
     /* align-self: center; */
 
@@ -67,6 +78,7 @@ body{
 }
 /* clip-path: ellipse*/
 .options{
+    flex-grow: 1;
     text-align: center;
    
  
@@ -79,22 +91,33 @@ body{
     font-family: rockwell;
     font-size: 100%;
     margin-top: 1%;
-    width: 50%;
+    /* width: 50%; */
     border-top-left-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-left-radius: 15px;
      border-top-right-radius: 15px;  /* Arrondir le coin supérieur gauche */
      border-bottom-right-radius: 15px;
      cursor: pointer;
+     width: 80%;//pour définir la taille
      /* align-items: center; */
      /* align-content: center; */
      
  
      transition: background-color 0.3s ease;
 }
-/* .antoher-class{
-display: block;
-margin-bottom: 10px;
-} */
+
+.question, .options {
+    flex: 1;  /* Les deux éléments prennent un espace égal */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
 button:hover {
     background: #2e95aa;
 }
@@ -125,7 +148,7 @@ button:hover {
      border-bottom-left-radius: 5px;
      border-top-right-radius: 5px;  /* Arrondir le coin supérieur gauche */
      border-bottom-right-radius: 5px;
-   
+     margin-bottom: 2%;
 }
 #next-button:hover {
     background-color: #005f73;
@@ -134,4 +157,32 @@ button:hover {
 #next-button:active {
     background-color: #004c58; 
     
+}
+
+
+#replay-button {
+
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    /* width: 63%; */
+    cursor: pointer;
+    background: #076585;
+    color: white;
+    display: inline-block;
+    width: 15%;
+    border-top-left-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-left-radius: 5px;
+     border-top-right-radius: 5px;  /* Arrondir le coin supérieur gauche */
+     border-bottom-right-radius: 5px;
+     margin-bottom: 2%;
+}
+
+#replay-button:hover {
+    background-color: #005f73;
+}
+
+#replay-button:active {
+    background-color: #004c58; 
 }
